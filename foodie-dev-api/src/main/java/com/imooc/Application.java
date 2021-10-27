@@ -2,13 +2,16 @@ package com.imooc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import tk.mybatis.spring.annotation.MapperScan;
 
 /**
- * @description:
+ * @description: 默认扫描当前包下所有的类和所有子包里面的类
  * @author: chengho
  * @create: 2021-10-20 21:41
  */
 @SpringBootApplication
+// 扫描 mybatis 通用 mapper 所在的包
+@MapperScan(basePackages = "com.imooc.mapper")
 public class Application {
 
     public static void main(String[] args) {
